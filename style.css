@@ -1,0 +1,204 @@
+:root {
+  --body-bg: #fafafa;
+  --box-bg: #fff;
+  --box-border-color: #dbdbdb;
+  --txt-color: #262626;
+  --txt-second-color: #8e8e8e;
+  --btn-bg: #0095f6;
+  --btn-color: #fff;
+  --fb-color: #385185;
+  --a-color: #00376b;
+}
+
+.dark {
+  /* 이건 다크모드에서 사용할 컬러값 */
+  --body-bg: #151515;
+  --box-bg: #151515;
+  --box-border-color: #262626;
+  --txt-color: #d2d2d2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--body-bg);
+  color: var(--txt-color);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  width: 350px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.box {
+  border: 1px solid var(--box-border-color);
+  background-color: var(--box-bg);
+  border-radius: 5px;
+}
+
+.form-container .logo {
+  width: 175px;
+  height: 50px;
+  margin: 20px auto;
+}
+
+.form-container .logo img {
+  width: 100%;
+}
+
+.logo-dark {
+  display: none;
+}
+
+/* body한테 dark라는 클래스가 있을 때 */
+.dark .logo-dark {
+  display: block;
+}
+
+.dark .logo-light {
+  display: none;
+}
+
+.signin-form {
+  padding-top: 24px;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin: 0 40px 6px;
+}
+
+.animate-input {
+  position: relative;
+  height: 36px;
+  border: 1px solid var(--box-border-color);
+  border-radius: 3px;
+}
+
+.animate-input span {
+  position: absolute;
+  left: 8px;
+  font-size: 12px;
+  color: var(--txt-second-color);
+  line-height: 36px;
+  pointer-events: none;
+  /* 이게 이벤트를 제어하는 것이다. html 요소에 정의된 클릭을 비활성화 시키는 속성이다. */
+  /* 즉 span을 클릭하더라도 span에 입력된 글씨를 클릭하는 게 아니라 글씨를 덮고 있는 input을 클릭한 것이다. */
+  transform-origin: left;
+}
+
+.animate-input input {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  border: none;
+  outline: none;
+  background-color: var(--box-bg);
+  color: var(--txt-color);
+}
+
+.animate-input.active span {
+  transform: scale(0.8) translateY(-10px);
+}
+
+.animate-input.active input {
+  padding: 14px 0 2px 8px;
+}
+
+.animate-input button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.animate-input.active button {
+  display: inline;
+}
+
+.btn-group {
+  padding: 8px 40px;
+}
+
+.btn-login {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background-color: rgba(0, 149, 246, 0.3);
+}
+
+.or-box {
+  display: flex;
+  align-items: center;
+  /* 위 좌우 아래 */
+  padding: 10px 40px 18px;
+}
+
+.or-box:nth-child(1),
+.or-box:nth-child(3) {
+  flex-grow: 1;
+  height: 1px;
+  background-color: var(--box-border-color);
+}
+
+.or-box:nth-child(2) {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--txt-second-color);
+}
+
+
+
+
+
+
+.btn-fb img {
+  width: 30px;
+}
+
+.link {
+  display: flex;
+}
+
+
+
+
